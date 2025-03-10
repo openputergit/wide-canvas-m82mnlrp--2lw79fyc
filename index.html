@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TradeCrafts Share Market Institute | Cyberpunk Trading</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --neon-blue: #00f3ff;
+            --neon-pink: #ff00ff;
+            --cyber-purple: #800080;
+        }
+        
+        * {
+            font-family: 'Rajdhani', sans-serif;
+            cursor: none;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        .custom-cursor {
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--neon-blue);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            mix-blend-mode: difference;
+            transition: all 0.1s ease;
+        }
+
+        .cyber-gradient {
+            background: linear-gradient(45deg, #000428, #004e92);
+        }
+
+        .cyber-card {
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--neon-blue);
+            box-shadow: 0 0 15px var(--neon-blue);
+        }
+
+        .neon-text {
+            text-shadow: 0 0 10px var(--neon-blue);
+        }
+
+        .cyber-button {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .cyber-button::before {
+            content: '';
+            position: absolute;
+            top: -100%;
+            left: -100%;
+            width: 300%;
+            height: 300%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: all 0.3s ease;
+        }
+
+        .cyber-button:hover::before {
+            top: -50%;
+            left: -50%;
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                        url('https://images.unsplash.com/photo-1639322537228-f710d846310a') center/cover;
+            position: relative;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 2px,
+                rgba(0, 243, 255, 0.1) 2px,
+                rgba(0, 243, 255, 0.1) 4px
+            );
+        }
+
+        .glitch-effect {
+            animation: glitch 2s infinite;
+        }
+
+        @keyframes glitch {
+            0% { transform: skew(0deg); }
+            20% { transform: skew(2deg); }
+            40% { transform: skew(-2deg); }
+            60% { transform: skew(1deg); }
+            80% { transform: skew(-1deg); }
+            100% { transform: skew(0deg); }
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <div id="custom-cursor" class="custom-cursor"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-black bg-opacity-80 backdrop-filter backdrop-blur-lg border-b border-blue-400">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <h1 class="text-2xl font-bold text-blue-400 neon-text">TRADECRAFTS</h1>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-blue-400 hover:text-pink-500 transition duration-300">HOME</a>
+                    <a href="#about" class="text-blue-400 hover:text-pink-500 transition duration-300">ABOUT</a>
+                    <a href="#courses" class="text-blue-400 hover:text-pink-500 transition duration-300">COURSES</a>
+                    <a href="#success" class="text-blue-400 hover:text-pink-500 transition duration-300">SUCCESS</a>
+                    <a href="#contact" class="text-blue-400 hover:text-pink-500 transition duration-300">CONTACT</a>
+                </div>
+                <button class="md:hidden text-blue-400">
+                    <i class="bi bi-list text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section min-h-screen flex items-center relative">
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <h1 class="text-4xl md:text-7xl font-bold mb-6 glitch-effect">
+                <span class="text-blue-400">TRADE</span>
+                <span class="text-pink-500">CRAFTS</span>
+            </h1>
+            <p class="text-xl md:text-3xl mb-8 text-blue-300">MASTER THE DIGITAL FRONTIER OF TRADING</p>
+            <a href="#courses" class="cyber-button bg-blue-600 text-white font-bold py-4 px-12 rounded-lg inline-block hover:bg-blue-700 transition duration-300">
+                INITIATE TRADING SEQUENCE
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 cyber-gradient">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-16 text-blue-400 neon-text">SYSTEM OVERVIEW</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <p class="text-lg text-blue-200 leading-relaxed">
+                        Enter the matrix of financial markets with TradeCrafts. Our neural network of experts combines cutting-edge technical analysis with battle-tested trading strategies. Upload your trading potential and download success.
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="cyber-card p-6 rounded-lg">
+                        <h3 class="text-xl font-bold text-blue-400 mb-2">Vaibhav Rananavare</h3>
+                        <p class="text-blue-200">Neural Network Architect</p>
+                    </div>
+                    <div class="cyber-card p-6 rounded-lg">
+                        <h3 class="text-xl font-bold text-blue-400 mb-2">Rakesh Ghule</h3>
+                        <p class="text-blue-200">Data Stream Analyst</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="py-20 bg-black">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-16 text-blue-400 neon-text">UPGRADE PROTOCOLS</h2>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="cyber-card p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4 text-blue-400">BASIC PROTOCOL</h3>
+                    <p class="text-blue-200 mb-4">System initialization and market fundamentals</p>
+                    <p class="text-3xl font-bold mb-6 text-pink-500">₹12,000</p>
+                    <button onclick="handlePayment('basic')" class="cyber-button bg-blue-600 w-full text-white font-bold py-3 px-8 rounded-lg">
+                        INITIALIZE UPGRADE
+                    </button>
+                </div>
+                <div class="cyber-card p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4 text-blue-400">ADVANCED PROTOCOL</h3>
+                    <p class="text-blue-200 mb-4">Full system integration with advanced algorithms</p>
+                    <p class="text-3xl font-bold mb-6 text-pink-500">₹19,999</p>
+                    <button onclick="handlePayment('advanced')" class="cyber-button bg-blue-600 w-full text-white font-bold py-3 px-8 rounded-lg">
+                        ACTIVATE FULL ACCESS
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 cyber-gradient">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-16 text-blue-400 neon-text">ESTABLISH CONNECTION</h2>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="cyber-card p-8 rounded-lg">
+                    <h3 class="text-xl font-bold mb-4 text-blue-400">TRANSMISSION CHANNELS</h3>
+                    <p class="mb-2 text-blue-200"><i class="bi bi-telephone-fill mr-2"></i> 995576020 / 9850690303</p>
+                    <p class="mb-2 text-blue-200"><i class="bi bi-envelope-fill mr-2"></i> Tradecraftsharemarketinstitute@gmail.com</p>
+                    <p class="mb-4 text-blue-200"><i class="bi bi-geo-alt-fill mr-2"></i> Node 306, Crystal Fortune Matrix, Mundhwa, Pune 411036</p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/tradecrafts_institute" target="_blank" class="text-2xl text-blue-400 hover:text-pink-500">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="https://chat.whatsapp.com/KK2W5fALipG9fQOEwhU5ob" target="_blank" class="text-2xl text-blue-400 hover:text-green-500">
+                            <i class="bi bi-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="cyber-card p-8 rounded-lg">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.2613267110847!2d73.91411231489322!3d18.54644398738454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c147b8b3a3bf%3A0x6f7fdcc8e4d6c77e!2sMundhwa%2C%20Pune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1645548762374!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-8 border-t border-blue-400">
+        <div class="container mx-auto px-4 text-center">
+            <p class="mb-4 text-blue-300">Join our network for daily market intelligence</p>
+            <a href="https://chat.whatsapp.com/KK2W5fALipG9fQOEwhU5ob" target="_blank" class="cyber-button bg-green-600 text-white font-bold py-2 px-6 rounded-lg inline-block hover:bg-green-700">
+                CONNECT TO NETWORK
+            </a>
+            <p class="mt-8 text-blue-400">&copy; 2024 TRADECRAFTS // ALL RIGHTS SECURED</p>
+        </div>
+    </footer>
+
+    <script>
+        // Custom cursor
+        const cursor = document.getElementById('custom-cursor');
+        let lastScrollTop = 0;
+
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+
+        window.addEventListener('scroll', () => {
+            const st = window.pageYOffset || document.documentElement.scrollTop;
+            cursor.style.borderColor = st > lastScrollTop ? '#ff00ff' : '#00f3ff';
+            cursor.style.boxShadow = `0 0 10px ${st > lastScrollTop ? '#ff00ff' : '#00f3ff'}`;
+            lastScrollTop = st <= 0 ? 0 : st;
+        });
+
+        // Payment handling
+        function handlePayment(course) {
+            const amounts = {
+                'basic': 12000,
+                'advanced': 19999
+            };
+            alert(`Initializing payment protocol for ${course} upgrade. Amount: ₹${amounts[course]}`);
+            // Implement actual payment gateway integration here
+        }
+    </script>
+<script>document.body.addEventListener('wheel', e => { if (!e.ctrlKey) return; e.preventDefault(); return }, { passive: false })</script>
+	</body>
+</html>
